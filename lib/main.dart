@@ -121,6 +121,10 @@ class _HomePageState extends State<HomePage> {
             _buildDrawerItem("Report"),
             _buildDrawerItem("Chat"),
             _buildDrawerItem("Profile"),
+            //Shenyag just adds these in DrawerItem.
+            _buildDrawerItem("Evacuation Drill"),
+            _buildDrawerItem("Pre-drill survey"),
+            _buildDrawerItem("Post-drill survey"),
             const Divider(),
             ListTile(
               title: Text('Log Out',
@@ -158,7 +162,7 @@ class _HomePageState extends State<HomePage> {
       },
     );
   }
-
+//Need to add
   Widget _getPageContent(String pageName, String? userId) {
     // Return the respective page content based on the selected page
     switch (pageName) {
@@ -171,6 +175,14 @@ class _HomePageState extends State<HomePage> {
         return Center(child: ChatPage());
       case "Profile":
         return Center(child: ProfilePage());
+      //Shenyang just adds these placeholders.
+      //We need to add child for these pages (.dart file)
+      case "Evacuation Drill":
+        return Container();
+      case "Pre-drill survey":
+        return Container();
+      case "Post-drill survey":
+        return Container();
       default:
         return Container(); // Default empty container
     }
